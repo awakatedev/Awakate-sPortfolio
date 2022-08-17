@@ -1,12 +1,12 @@
 <br>
 <div align="center">
-  <a href="https://diversocreativeagency.com">
-  <img src="https://i.imgur.com/1l7ql7S.png"
+  <a href="https://awakate.dev">
+  <img src="https://i.imgur.com/s3Kyuco.png"
     width="700px"
   /> </a>
 </div>
-<h2 align="center">A brand created to grow yours</h2>
-<p align="center"><b>The E-commerce theme/template made with Next.js and headless Wordpress</b></p>
+<h2 align="center">AWakates.dev Portfolio</h2>
+<p align="center"><b>Made with Next.js and headless Wordpress</b></p>
 <br>
 <div align="center">
 <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>

@@ -5,29 +5,34 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      
       screens: {
         sp: { min: '410px' },
         ...defaultTheme.screens,
       },
       colors: {
-        btnColor: '#0891B2',
-        btnColorHover: '#38BDF8',
         primary: '#FFFFFF',
         secondary: '#E6E6E6',
         secondarySoft: '#F4F4F4',
         textDark: '#191919',
         textGray: '#878787',
-        darkGray: '#5A5A5A',
-        softDark: '#494949',
+        softGray: '#0D0D0D',
+        darkGray: '#070707',
+        softDark: '#191919',
         footerBg: '#404040',
+        blackBg: '#000000',
       },
       fontFamily: {
-        outfitL: ['outfitlight'],
-        outfitM: ['outfitmedium'],
+        inter: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      boxShadow: {
+        '3xl': '0px 0px 80px rgba(0, 0, 0, 0.3)',
       },
       backgroundImage: {
-        'hero-pattern':
-          "url('../images/anchor-lee-kO1G3neRA2o-unsplash 1.png')",
+        'Mhero-img':
+          "url('../images/TinyBg.png')",
+        'Dhero-img':
+          "url('../images/DeskBg.png')",
       },
       gridTemplateColumns: {
         card2: 'repeat(2, minmax(0, 163px))',
