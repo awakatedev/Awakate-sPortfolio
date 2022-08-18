@@ -1,28 +1,59 @@
-import { forEach } from 'lodash';
 import { useState, useEffect } from 'react';
 
 function StyledTag(prop) {
-  const [color, setColor] = useState('from-purple-600 to-blue-500');
-  const [shadow, setShadow] = useState('shadow-blue-500');
+  const colors = [
+    ['from-purple-600 to-blue-500', 'shadow-blue-500'],
+    ['from-pink-500 to-orange-400', 'shadow-pink-500'],
+    ['from-green-400 to-blue-600', 'shadow-green-400'],
+    ['from-purple-500 to-pink-500', 'shadow-purple-500'],
+  ];
+  const [index, setIndex] = useState(0);
+  const [color, setColor] = useState(colors[0][0]);
+  const [shadow, setShadow] = useState(colors[0][1]);
   const { type, children, additionalStyle } = prop;
 
-  useEffect(() => {
-    const colors = [
-      ['from-purple-600 to-blue-500', 'shadow-blue-500'],
-      ['from-pink-500 to-orange-400', 'shadow-pink-500'],
-      ['from-green-400 to-blue-600', 'shadow-green-400'],
-      ['from-purple-500 to-pink-500', 'shadow-purple-500'],
-    ];
+  const setExtraClass = (index) => {
+    switch (index){
+      case 0:
+        setColor(colors[1][0]);
+        setShadow(colors[1][1]);
+        break;
+      case 1:
+        setColor(colors[2][0]);
+        setShadow(colors[2][1]);
+        break;
+      case 2:
+        setColor(colors[3][0]);
+        setShadow(colors[3][1]);
+        break;
+      case 3:
+        setColor(colors[0][0]);
+        setShadow(colors[0][1]);
+      break;
+    }
+  }
 
-    
-      setTimeout(() => {
-        colors.forEach((e) => {
-          color !== e[0] ? setColor(e[0]) || setShadow(e[1]) : setColor('from-purple-600 to-blue-500') || setShadow('shadow-blue-500');
-        
-      }) 
-      }, 2000);
-   
-  },);
+  // Changes every 2 seconds
+  setTimeout(() => {
+    switch (index){
+      case 0:
+        setIndex(1);
+        break;
+      case 1:
+        setIndex(2);
+        break;
+      case 2:
+        setIndex(3);
+        break;
+      case 3:
+        setIndex(0);
+      break;
+    }
+  }, 2000);
+
+  useEffect(() => {
+    setExtraClass(index);
+  }, [index]);
 
   if (type === 'h1') {
     return (
