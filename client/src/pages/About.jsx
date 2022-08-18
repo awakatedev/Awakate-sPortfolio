@@ -21,7 +21,7 @@ function About() {
           <section className="flex w-full justify-center">
             <div className="my-10 flex h-40 w-full flex-row items-center justify-center overflow-hidden md:w-3/4">
               <div className="flex w-1/2 justify-end ">
-                <div className="h-24 w-24 justify-around rounded-full bg-textGray md:h-32 md:w-1/5" />
+                <div className="h-24 w-24 justify-around rounded-full bg-textGray md:h-32 md:w-32" />
               </div>
               <div className="ml-5 h-full border border-solid border-y-transparent border-l-primary border-r-transparent pl-5 md:ml-10 md:w-4/5 md:pl-10">
                 <StyledTag

@@ -104,12 +104,12 @@ function StyledTag(prop) {
   }
   if (type === 'button') {
     return (
-      <button
+      <span
         type="button"
         className={`bg-gradient-to-br text-xl duration-700 ease-in ${shadow} ${color}  ${additionalStyle}`}
       >
         {children}
-      </button>
+      </span>
     );
   }
   if (type === 'div') {
