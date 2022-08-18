@@ -1,14 +1,16 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { Icon } from '@iconify/react';
 import StyledTag from '../components/StyledTag';
 
 function Contact() {
+  const router = useRouter();
   return (
     <>
       <Head>
         <title>Contact | Awakate.dev</title>
       </Head>
-      <main className="mtmin-h-[660px] h-full flex-col justify-center bg-blackBg bg-Mhero-img bg-cover bg-fixed bg-center bg-no-repeat px-8 md:bg-Dhero-img ">
+      <main className="h-full min-h-[660px] flex-col justify-center bg-blackBg bg-Mhero-img bg-cover bg-fixed bg-center bg-no-repeat px-8 md:bg-Dhero-img ">
         <div className="pt-[9vh]">
           <section className="flex w-full justify-center">
             <StyledTag
@@ -24,7 +26,7 @@ function Contact() {
               type="p"
               additionalStyle="mt-10 text-center mb-10 w-full md:w-3/4"
             >
-              Don't hesitate in contact me, What are you waiting for?
+              Dont hesitate in contact me, What are you waiting for?
             </StyledTag>
           </section>
           <section className="flex flex-col items-center justify-center ">
@@ -32,21 +34,22 @@ function Contact() {
               type="button"
               additionalStyle="font-black p-0.5 overflow-hidden bg-none hover:bg-primary rounded-lg mt-10 h-20 min-h-[4rem] w-full bg-blackBg text-primary md:w-full md:max-w-[410px] md:items-center rounded-lg"
             >
-              <span
+              <button
+                type="button"
                 onClick={() => router.push('/Portfolio')}
-                className="flex h-full w-full items-center justify-center rounded-lg bg-primary font-medium text-blackBg transition-all duration-300 duration-75 ease-in hover:bg-blackBg hover:text-primary  "
+                className="flex h-full w-full items-center justify-center rounded-lg bg-primary font-medium text-blackBg transition-all duration-75 ease-in hover:bg-blackBg hover:text-primary "
               >
                 <Icon className="mr-3" icon="logos:google-gmail" />
                 E-mail me
-              </span>
+              </button>
             </StyledTag>
             <StyledTag
               type="button"
               additionalStyle="font-black p-0.5 overflow-hidden bg-gradient-to-br shadow-3xl rounded-lg mt-10 h-20 min-h-[4rem] w-full bg-blackBg text-primary md:w-full md:max-w-[410px] md:items-center rounded-lg"
             >
               <a
-                href="#"
-                className="flex h-full w-full items-center justify-center rounded-lg bg-blackBg font-medium text-primary transition-all duration-300 duration-75 ease-in hover:bg-transparent hover:text-blackBg "
+                href="https://awakate.dev"
+                className="flex h-full w-full items-center justify-center rounded-lg bg-blackBg font-medium text-primary transition-all duration-75 ease-in hover:bg-transparent hover:text-blackBg "
               >
                 <Icon className="mr-3" icon="akar-icons:linkedin-box-fill" />{' '}
                 Linkedin
@@ -57,8 +60,8 @@ function Contact() {
               additionalStyle="font-black p-0.5 overflow-hidden bg-gradient-to-br shadow-3xl rounded-lg mt-10 h-20 min-h-[4rem] w-full bg-blackBg text-primary md:w-full md:max-w-[410px] md:items-center rounded-lg"
             >
               <a
-                href="#"
-                className="flex h-full w-full items-center justify-center rounded-lg bg-blackBg font-medium transition-all duration-300 duration-75 ease-in hover:bg-transparent hover:text-blackBg "
+                href="https://awakate.dev"
+                className="flex h-full w-full items-center justify-center rounded-lg bg-blackBg font-medium transition-all  duration-75 ease-in hover:bg-transparent hover:text-blackBg "
               >
                 <Icon className="mr-3" icon="akar-icons:instagram-fill" />{' '}
                 Instagram

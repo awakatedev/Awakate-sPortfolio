@@ -7,53 +7,57 @@ function StyledTag(prop) {
     ['from-green-400 to-blue-600', 'shadow-green-400'],
     ['from-purple-500 to-pink-500', 'shadow-purple-500'],
   ];
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
   const [color, setColor] = useState(colors[0][0]);
   const [shadow, setShadow] = useState(colors[0][1]);
   const { type, children, additionalStyle } = prop;
 
-  const setExtraClass = (index) => {
-    switch (index){
-      case 0:
-        setColor(colors[1][0]);
-        setShadow(colors[1][1]);
-        break;
-      case 1:
-        setColor(colors[2][0]);
-        setShadow(colors[2][1]);
-        break;
-      case 2:
-        setColor(colors[3][0]);
-        setShadow(colors[3][1]);
-        break;
-      case 3:
-        setColor(colors[0][0]);
-        setShadow(colors[0][1]);
-      break;
-    }
-  }
-
-  // Changes every 2 seconds
-  setTimeout(() => {
-    switch (index){
-      case 0:
-        setIndex(1);
-        break;
-      case 1:
-        setIndex(2);
-        break;
-      case 2:
-        setIndex(3);
-        break;
-      case 3:
-        setIndex(0);
-      break;
-    }
-  }, 2000);
-
   useEffect(() => {
+    const setExtraClass = () => {
+      switch (index) {
+        case 0:
+          setColor(colors[1][0]);
+          setShadow(colors[1][1]);
+          break;
+        case 1:
+          setColor(colors[2][0]);
+          setShadow(colors[2][1]);
+          break;
+        case 2:
+          setColor(colors[3][0]);
+          setShadow(colors[3][1]);
+          break;
+        case 3:
+          setColor(colors[0][0]);
+          setShadow(colors[0][1]);
+          break;
+        default:
+          setColor(colors[0][0]);
+          setShadow(colors[0][1]);
+      }
+
+      // Changes every 2 seconds
+      setTimeout(() => {
+        switch (index) {
+          case 0:
+            setIndex(1);
+            break;
+          case 1:
+            setIndex(2);
+            break;
+          case 2:
+            setIndex(3);
+            break;
+          case 3:
+            setIndex(0);
+            break;
+          default:
+            setIndex(0);
+        }
+      }, 2000);
+    };
     setExtraClass(index);
-  }, [index]);
+  }, [index, colors]);
 
   if (type === 'h1') {
     return (
@@ -92,7 +96,7 @@ function StyledTag(prop) {
   if (type === 'li') {
     return (
       <li
-        className={`text-1xl font-inter text-textGray hover:text-primary ${additionalStyle}`}
+        className={`font-inter text-xl text-textGray hover:text-primary ${additionalStyle}`}
       >
         {children}
       </li>
@@ -101,6 +105,7 @@ function StyledTag(prop) {
   if (type === 'button') {
     return (
       <button
+        type="button"
         className={`bg-gradient-to-br text-xl duration-700 ease-in ${shadow} ${color}  ${additionalStyle}`}
       >
         {children}

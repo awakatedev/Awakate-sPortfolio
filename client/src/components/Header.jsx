@@ -1,18 +1,12 @@
-import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Icon } from '@iconify/react';
 import useWindowSize from '../hooks/useWindowSize';
 import StyledTag from './StyledTag';
-import Menu from './Menu';
 
 function Header() {
   const router = useRouter();
-  const [menu, setMenu] = useState(false);
   const winSize = useWindowSize();
-  const handleClick = () => {
-    const newState = !menu;
-    setMenu(newState);
-  };
+
   if (winSize.width < 768) {
     return (
       <nav className="fixed z-20 flex h-16 w-screen justify-between bg-blackBg/60 px-6 backdrop-blur-xl">
@@ -25,7 +19,7 @@ function Header() {
             Awakate.dev
           </span>
         </button>
-        <button onClick={handleClick} type="button">
+        <button type="button">
           <Icon
             className="h-10 w-10 text-secondarySoft"
             icon="heroicons-outline:menu-alt-4"
@@ -49,19 +43,28 @@ function Header() {
       <div className=" flex w-1/2 flex-row items-center justify-items-center">
         <ul className="flex w-full flex-row items-center justify-evenly justify-items-center">
           <StyledTag type="li">
-            <button onClick={() => router.push('/')}>Home</button>
+            <button type="button" onClick={() => router.push('/')}>
+              Home
+            </button>
           </StyledTag>
           <StyledTag type="li">
-            <button onClick={() => router.push('/Portfolio')}>Portfolio</button>
+            <button type="button" onClick={() => router.push('/Portfolio')}>
+              Portfolio
+            </button>
           </StyledTag>
           <StyledTag type="li">
-            <button onClick={() => router.push('/About')}>About me</button>
+            <button type="button" onClick={() => router.push('/About')}>
+              About me
+            </button>
           </StyledTag>
           <StyledTag type="li">
-            <button onClick={() => router.push('/Contact')}>Contact</button>
+            <button type="button" onClick={() => router.push('/Contact')}>
+              Contact
+            </button>
           </StyledTag>
           <StyledTag type="li">
             <button
+              type="button"
               className="flex items-center gap-y-1"
               onClick={() => router.push('/Blog')}
             >

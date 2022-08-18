@@ -8,8 +8,9 @@ function Home() {
     <>
       <Head>
         <title>Home | Awakate.dev</title>
+        <link rel="icon" href="../assets/images/favicon.ico" />
       </Head>
-      <main className="mtmin-h-[660px] h-full flex-col justify-center bg-blackBg bg-Mhero-img bg-cover bg-fixed bg-center bg-no-repeat px-8 md:bg-Dhero-img ">
+      <main className="h-full min-h-[660px] flex-col justify-center bg-blackBg bg-Mhero-img bg-cover bg-fixed bg-center bg-no-repeat px-8 md:bg-Dhero-img ">
         <Hero />
         <section className="flex w-full flex-col items-center">
           <StyledTag
