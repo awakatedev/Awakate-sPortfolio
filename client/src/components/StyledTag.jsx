@@ -1,13 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo, useMemo } from 'react';
 
 function StyledTag(prop) {
-  const colors = [
-    ['from-purple-600 to-blue-500', 'shadow-blue-500'],
-    ['from-pink-500 to-orange-400', 'shadow-pink-500'],
-    ['from-green-400 to-blue-600', 'shadow-green-400'],
-    ['from-purple-500 to-pink-500', 'shadow-purple-500'],
-  ];
   const [index, setIndex] = useState(1);
+  const colors = useMemo(() => {
+    const colorsMemo = [
+      ['from-purple-600 to-blue-500', 'shadow-blue-500'],
+      ['from-pink-500 to-orange-400', 'shadow-pink-500'],
+      ['from-green-400 to-blue-600', 'shadow-green-400'],
+      ['from-purple-500 to-pink-500', 'shadow-purple-500'],
+    ];
+    return colorsMemo;
+  }, []);
+
   const [color, setColor] = useState(colors[0][0]);
   const [shadow, setShadow] = useState(colors[0][1]);
   const { type, children, additionalStyle } = prop;
@@ -122,4 +126,4 @@ function StyledTag(prop) {
     );
   }
 }
-export default StyledTag;
+export default memo(StyledTag);
