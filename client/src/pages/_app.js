@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="favicon.ico" />
       </Head>
+
       <Header />
       <Component {...pageProps} />
     </ApolloProvider>

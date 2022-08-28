@@ -10,6 +10,7 @@ module.exports = {
         sp: { min: '410px' },
         ...defaultTheme.screens,
       },
+      
       colors: {
         primary: '#FFFFFF',
         secondary: '#E6E6E6',
@@ -27,6 +28,7 @@ module.exports = {
       },
       boxShadow: {
         '3xl': '0px 0px 80px rgba(0, 0, 0, 0.3)',
+        '4xl': '5px 5px 80px rgba(0, 0, 0, 0.3)',
       },
       backgroundImage: {
         'Mhero-img':
@@ -35,11 +37,12 @@ module.exports = {
           "url('../images/DeskBg.png')",
       },
       gridTemplateColumns: {
+        card1: 'repeat(1, minmax(0, 300px))',
         card2: 'repeat(2, minmax(0, 163px))',
         card3: 'repeat(3, minmax(0, 163px))',
-        cardDesktop2: 'repeat(2, minmax(0, 447px))',
-        cardDesktop3: 'repeat(3, minmax(0, 447px))',
-        cardDesktop4: 'repeat(4, minmax(0, 447px))',
+        cardDesktop2: 'repeat(2, minmax(0, 600px))',
+        cardDesktop3: 'repeat(3, minmax(0, 647px))',
+        cardDesktop4: 'repeat(4, minmax(0, 647px))',
       },
       width: {
         containMax: '440px',

@@ -2,7 +2,7 @@ function Card() {
   return (
     <div
       role="status"
-      className="h-96 max-w-sm rounded-lg bg-softGray p-2 md:p-6"
+      className="h-72 max-w-sm rounded-lg bg-softGray p-2 md:h-80 md:p-6"
     >
       <div className="mb-4 flex h-48 animate-pulse items-center justify-center rounded bg-softDark">
         <svg

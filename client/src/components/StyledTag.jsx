@@ -4,16 +4,17 @@ function StyledTag(prop) {
   const [index, setIndex] = useState(1);
   const colors = useMemo(() => {
     const colorsMemo = [
-      ['from-purple-600 to-blue-500', 'shadow-blue-500'],
-      ['from-pink-500 to-orange-400', 'shadow-pink-500'],
-      ['from-green-400 to-blue-600', 'shadow-green-400'],
-      ['from-purple-500 to-pink-500', 'shadow-purple-500'],
+      ['from-purple-600 to-blue-500', 'shadow-blue-500', 'purple'],
+      ['from-pink-500 to-orange-400', 'shadow-pink-500', 'salmon'],
+      ['from-green-400 to-blue-600', 'shadow-green-400', 'aqua'],
+      ['from-purple-500 to-pink-500', 'shadow-purple-500', 'fuchsia'],
     ];
     return colorsMemo;
   }, []);
 
   const [color, setColor] = useState(colors[0][0]);
   const [shadow, setShadow] = useState(colors[0][1]);
+  const [svg, setSvg] = useState(colors[0][2]);
   const { type, children, additionalStyle } = prop;
 
   useEffect(() => {
@@ -22,18 +23,22 @@ function StyledTag(prop) {
         case 0:
           setColor(colors[1][0]);
           setShadow(colors[1][1]);
+          setSvg(colors[1][2]);
           break;
         case 1:
           setColor(colors[2][0]);
           setShadow(colors[2][1]);
+          setSvg(colors[2][2]);
           break;
         case 2:
           setColor(colors[3][0]);
           setShadow(colors[3][1]);
+          setSvg(colors[3][2]);
           break;
         case 3:
           setColor(colors[0][0]);
           setShadow(colors[0][1]);
+          setSvg(colors[0][2]);
           break;
         default:
           setColor(colors[0][0]);
@@ -75,7 +80,7 @@ function StyledTag(prop) {
   if (type === 'h2') {
     return (
       <h2
-        className={`text-center font-inter text-5xl font-bold text-primary lg:text-4xl sp:text-8xl  ${additionalStyle}`}
+        className={`text-center font-inter text-5xl font-bold text-primary lg:text-6xl sp:text-8xl  ${additionalStyle}`}
       >
         {children}
       </h2>
@@ -83,16 +88,34 @@ function StyledTag(prop) {
   }
   if (type === 'h3') {
     return (
-      <h2
-        className={`text-center font-inter text-3xl font-bold text-primary lg:text-4xl sp:text-5xl  ${additionalStyle}`}
+      <h3
+        className={`text-center font-inter text-3xl font-black text-primary lg:text-4xl sp:text-5xl  ${additionalStyle}`}
       >
         {children}
-      </h2>
+      </h3>
+    );
+  }
+  if (type === 'h4') {
+    return (
+      <h4
+        className={` font-inter text-2xl font-bold text-primary lg:text-2xl sp:text-3xl  ${additionalStyle}`}
+      >
+        {children}
+      </h4>
+    );
+  }
+  if (type === 'h5') {
+    return (
+      <h5
+        className={` font-inter text-xl font-bold text-primary  ${additionalStyle}`}
+      >
+        {children}
+      </h5>
     );
   }
   if (type === 'p') {
     return (
-      <p className={`font-inter text-2xl text-textGray ${additionalStyle}`}>
+      <p className={`font-inter text-xl text-textGray ${additionalStyle}`}>
         {children}
       </p>
     );
@@ -109,8 +132,16 @@ function StyledTag(prop) {
   if (type === 'button') {
     return (
       <span
-        type="button"
-        className={`bg-gradient-to-br text-xl duration-700 ease-in ${shadow} ${color}  ${additionalStyle}`}
+        className={`bg-gradient-to-br text-xl duration-300 ease-in ${shadow} ${color}  ${additionalStyle}`}
+      >
+        {children}
+      </span>
+    );
+  }
+  if (type === 'button2') {
+    return (
+      <span
+        className={`text-xl duration-300 ease-in ${shadow} ${additionalStyle}`}
       >
         {children}
       </span>
@@ -119,10 +150,26 @@ function StyledTag(prop) {
   if (type === 'div') {
     return (
       <div
-        className={`bg-gradient-to-br text-xl duration-700 ease-in  ${color}  ${additionalStyle}`}
+        className={`bg-gradient-to-br text-xl duration-300 ease-in ${shadow} ${color}  ${additionalStyle}`}
       >
         {children}
       </div>
+    );
+  }
+  if (type === 'article') {
+    return (
+      <article
+        className={`rounded-lg border border-textDark bg-blackBg p-6 ${additionalStyle}`}
+      >
+        {children}
+      </article>
+    );
+  }
+  if (type === 'svg') {
+    return (
+      <svg height="200" width="200">
+        <polygon points="100,10 200,9800 10,9800" fill={`${svg}`} />
+      </svg>
     );
   }
 }

@@ -43,22 +43,38 @@ function Header() {
       <div className=" flex w-1/2 flex-row items-center justify-items-center">
         <ul className="flex w-full flex-row items-center justify-evenly justify-items-center">
           <StyledTag type="li">
-            <button type="button" onClick={() => router.push('/')}>
+            <button
+              type="button"
+              className={router.pathname === '/' ? 'text-primary' : ''}
+              onClick={() => router.push('/')}
+            >
               Home
             </button>
           </StyledTag>
           <StyledTag type="li">
-            <button type="button" onClick={() => router.push('/Portfolio')}>
+            <button
+              type="button"
+              className={router.pathname === '/Portfolio' ? 'text-primary' : ''}
+              onClick={() => router.push('/Portfolio')}
+            >
               Portfolio
             </button>
           </StyledTag>
           <StyledTag type="li">
-            <button type="button" onClick={() => router.push('/About')}>
+            <button
+              type="button"
+              className={router.pathname === '/About' ? 'text-primary' : ''}
+              onClick={() => router.push('/About')}
+            >
               About me
             </button>
           </StyledTag>
           <StyledTag type="li">
-            <button type="button" onClick={() => router.push('/Contact')}>
+            <button
+              type="button"
+              className={router.pathname === '/Contact' ? 'text-primary' : ''}
+              onClick={() => router.push('/Contact')}
+            >
               Contact
             </button>
           </StyledTag>
