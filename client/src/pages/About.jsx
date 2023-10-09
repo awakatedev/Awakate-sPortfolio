@@ -47,14 +47,13 @@ function About() {
                   type="p"
                   additionalStyle="text-sm md:text-xl text-justify"
                 >
-                  Just a guy appasionated
-                  <br /> about high quality software creation
+                  Just a guy appasionated<br />about high quality software creation
                 </StyledTag>
               </div>
             </div>
           </section>
           <section className="flex items-center justify-center mt-8">
-            <StyledTag type="p" additionalStyle=" mb-20 w-full md:w-3/4">
+            <StyledTag type="p" additionalStyle="text-center mb-20 w-full md:w-3/4">
               I am a Venezuelan deeply passionate about viewing technology as an
               art form and crafting digital products. I&#039;ve had the
               privilege to contribute to developments for high-profile clients

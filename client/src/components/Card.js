@@ -60,9 +60,16 @@ function Card() {
     if (!project) return null;
 
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-black/90 p-5 z-50">
-        <div className="h-[90%] w-full max-w-2xl rounded-lg bg-softGray p-8">
-          <div className="flex justify-between items-center">
+      <div
+        className={`fixed inset-0 flex items-center justify-center p-5 z-50 transition-opacity duration-500 ease-in-out transform ${
+          isModalOpen
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
+        }`}
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.9)' }}
+      >
+        <div className="h-[95%] w-full max-w-2xl rounded-lg bg-softGray p-8">
+          <div className="flex justify-between items-start gap-5">
             <h3 className="font-inter font-bold text-primary text-2xl ">
               {project.name}
             </h3>
@@ -76,7 +83,7 @@ function Card() {
               />
             </button>
           </div>
-          <div className="w-full md:h-1/4 h-2/5 mt-8 md:mb-40 mb-2">
+          <div className="w-full md:h-1/4 mt-8 md:mb-36 mb-0">
             <Image
               src={project.image}
               alt={project.name}
@@ -111,10 +118,10 @@ function Card() {
             <h4 className="my-2 font-inter font-bold text-primary lg:text-3xl sp:text-xl">
               Stack:
             </h4>
-            <ul className="my-3 flex gap-3">
+            <ul className="my-3 grid grid-cols-4 gap-3 md:w-3/4 w-full">
               {project.stack.map((tech) => (
                 <li
-                  className="rounded-full bg-softDark py-3 px-4 font-inter font-bold text-primary"
+                  className="w-fit rounded-full bg-softDark py-3 px-4 font-inter font-bold text-primary"
                   key={tech}
                 >
                   {tech}
@@ -158,7 +165,7 @@ function Card() {
                     height={600}
                   />
                 </div>
-                <secction className="w-full overflow-hidden">
+                <section className="w-full overflow-hidden">
                   <div className="flex justify-between">
                     <StyledTag
                       type="h5"
@@ -193,7 +200,7 @@ function Card() {
                       </li>
                     )}
                   </ul>
-                </secction>
+                </section>
               </div>
             ))}
         </div>
