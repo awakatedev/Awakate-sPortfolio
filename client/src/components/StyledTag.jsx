@@ -71,7 +71,7 @@ function StyledTag(prop) {
   if (type === 'h1') {
     return (
       <h1
-        className={`bg-gradient-to-br text-center font-inter text-6xl duration-700 ease-in lg:text-4xl sp:text-9xl ${color} ${additionalStyle}`}
+        className={`bg-gradient-to-br text-center font-inter md:text-9xl duration-700 ease-in lg:text-9xl text-7xl ${color} ${additionalStyle}`}
       >
         {children}
       </h1>
@@ -80,7 +80,7 @@ function StyledTag(prop) {
   if (type === 'h2') {
     return (
       <h2
-        className={`text-center font-inter text-5xl font-bold text-primary lg:text-6xl sp:text-8xl  ${additionalStyle}`}
+        className={`text-center font-inter text-4xl font-bold text-primary lg:text-6xl sp:text-6xl  ${additionalStyle}`}
       >
         {children}
       </h2>

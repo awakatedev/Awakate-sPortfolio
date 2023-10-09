@@ -13,8 +13,8 @@ function Hero() {
         I&#039;m Jhonathan
       </StyledTag>
 
-      <StyledTag type="h2" additionalStyle="text-primary sp:text-6xl mt-0.5">
-        Web developer
+      <StyledTag type="h3" additionalStyle="text-primary sp:text-6xl mt-0.5">
+        Full Stack Developer
       </StyledTag>
       <section className="mt-14 flex w-full flex-col content-center justify-center md:mt-20 md:w-7/12 md:flex-row">
         <StyledTag
@@ -26,7 +26,7 @@ function Hero() {
             onClick={() => router.push('/About')}
             className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-lg font-medium text-blackBg transition-all duration-300  ease-in hover:bg-blackBg hover:text-primary "
           >
-            Know more about me
+            Learn more about me
           </button>
         </StyledTag>
 
@@ -39,7 +39,7 @@ function Hero() {
             onClick={() => router.push('/Portfolio')}
             className="flex h-full w-full items-center justify-center rounded-lg bg-blackBg text-lg font-medium text-primary transition-all duration-300  ease-in hover:bg-transparent hover:text-blackBg "
           >
-            Take a look at my job
+            See what I&#039;ve done
           </button>
         </StyledTag>
       </section>

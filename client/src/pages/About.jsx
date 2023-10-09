@@ -1,9 +1,6 @@
 import Head from 'next/head';
-import { Icon } from '@iconify/react';
 import Image from 'next/image';
 import StyledTag from '../components/StyledTag';
-
-import TagGlobe from '../components/TagCloud';
 
 function About() {
   return (
@@ -16,7 +13,7 @@ function About() {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className="h-full min-h-[660px] flex-col justify-center bg-blackBg bg-Mhero-img bg-cover bg-fixed bg-center bg-no-repeat px-8 md:bg-Dhero-img ">
+      <main className=" h-full min-h-[660px] flex-col justify-center bg-blackBg bg-Mhero-img bg-cover bg-fixed bg-center bg-no-repeat px-8 md:bg-Dhero-img ">
         <div className="pt-[9vh]">
           <section className="flex w-full justify-center">
             <StyledTag
@@ -44,81 +41,52 @@ function About() {
                   type="h5"
                   additionalStyle="text-base md:text-xl text-left font-bold text-primary mt-3 mb-3"
                 >
-                  Web Developer leader at Diverso Group
+                  Full stack developer
                 </StyledTag>
                 <StyledTag
                   type="p"
                   additionalStyle="text-sm md:text-xl text-justify"
                 >
-                  Skilled React.js/Wordpress Web Developer specialized in
-                  front-end development and skilled in UI and UX.
+                  Just a guy appasionated
+                  <br /> about high quality software creation
                 </StyledTag>
               </div>
             </div>
           </section>
-          <section className="flex items-center justify-center">
+          <section className="flex items-center justify-center mt-8">
             <StyledTag type="p" additionalStyle=" mb-20 w-full md:w-3/4">
-              I&#039;m a 20-year-old Venezuelan passionate about technology as
-              an art and the creation of digital products, I&#039;m very
-              interested in creating tools that work in an economic environment,
-              in conclusion I&#039;m very attracted to the fintech market.
-              I&#039;m very meticulous in aspects of design and how people see
-              and interact with products, which has led me to delve into the
-              area of UI and UX for the creation of digital products.
+              I am a Venezuelan deeply passionate about viewing technology as an
+              art form and crafting digital products. I&#039;ve had the
+              privilege to contribute to developments for high-profile clients
+              such as ISUZU and Chevron, collaborating closely with a small yet
+              skilled team of developers. Throughout my tenure as a software
+              developer, I&#039;ve matured into a Full Stack Developer, taking
+              on UI design responsibilities, engaging in the structuring of
+              project architectures, diving into both front-end and back-end
+              development for web and mobile applications, and predominantly
+              overseeing the deployment, automation, and management of our cloud
+              servers.
               <br />
               <br />
-              My specialty is front-end development, but I have experience and
-              interest in the entire software development process including
-              back-end development, which is an area I would like and plan to
-              delve deeper into.
-            </StyledTag>
-          </section>
-          <section className="flex w-full flex-col items-center">
-            <span className="mb-10 text-center text-sm font-bold text-primary">
-              YOUR DIGITAL SOLUTION
-            </span>
-            <div className="flex flex-col items-center justify-center">
-              <StyledTag type="svg" />
-              <StyledTag
-                type="div"
-                additionalStyle="w-16 h-16 shadow-3xl rounded-full flex justify-center items-center"
-              >
-                <StyledTag type="h4" additionalStyle="text-blackBg font-bold">
-                  <Icon icon="fluent:brain-circuit-24-regular" />
-                </StyledTag>
-              </StyledTag>
-              <StyledTag type="h3" additionalStyle="mt-5 mb-20">
-                Skills
-              </StyledTag>
-            </div>
-          </section>
-          <section className="flex w-full flex-col justify-center pb-10 md:w-11/12 md:flex-row md:justify-around">
-            <div className="w-full md:mr-20 md:w-9/12">
-              <StyledTag type="h4">My soft skills</StyledTag>
-              <StyledTag type="p" additionalStyle="mt-3">
-                I really like collaborative work since it is the most efficient
-                way to create software. I&#039;m a very communicative and
-                expressive person, orderly, punctual and I like to propose
-                improvements to generate growth. I adapt easily to work
-                environments and have a good performance. assuming the role of
-                leader if necessary.
-              </StyledTag>
-              <StyledTag type="h4" additionalStyle="mt-5">
-                Extra
-              </StyledTag>
-              <StyledTag type="p" additionalStyle="mt-3">
-                I&#039;m a big fan of agile methodologies, especially SCRUM, it
-                is my favorite work methodology.
-              </StyledTag>
-            </div>
-            <StyledTag
-              type="article"
-              additionalStyle="w-full mt-10 md:mt-0 md:w-2/5 md:block"
-            >
-              <StyledTag type="h4" additionalStyle="mb-5">
-                Technologies
-              </StyledTag>
-              <TagGlobe />
+              I&#039;ve had exposure to a vast array of technologies, adhering
+              to best practices and clean code. In the frontend sphere,
+              I&#039;ve utilised technologies like React.js, Next.js, and
+              Wordpress (a platform I&#039;m familiar with but not particularly
+              fond of). I&#039;ve also leveraged various CSS pre-processors and
+              frameworks for web front-end development, and have employed
+              React-Native for mobile app development. In the back-end,
+              I&#039;ve worked with technologies such as Nest.js (my preferred
+              back-end framework) and Express, along with database management
+              using MySQL and MongoDB.
+              <br />
+              <br /> With comprehensive knowledge and experience in Linux
+              environments — my personal operating system of choice — I find
+              myself at an advantage when working with cloud architectures,
+              especially AWS. It&#039;s my preferred cloud platform, and
+              I&#039;ve amassed substantial experience with services like EC2
+              and AWS Lightsail. This, combined with my deep understanding of
+              the operating system, allows me to optimise opportunities for
+              intricate projects.
             </StyledTag>
           </section>
         </div>

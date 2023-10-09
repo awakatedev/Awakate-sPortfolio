@@ -37,12 +37,12 @@ module.exports = {
           "url('../images/DeskBg.png')",
       },
       gridTemplateColumns: {
-        card1: 'repeat(1, minmax(0, 300px))',
+        card1: 'repeat(1, minmax(0, 400px))',
         card2: 'repeat(2, minmax(0, 163px))',
-        card3: 'repeat(3, minmax(0, 163px))',
-        cardDesktop2: 'repeat(2, minmax(0, 600px))',
-        cardDesktop3: 'repeat(3, minmax(0, 647px))',
-        cardDesktop4: 'repeat(4, minmax(0, 647px))',
+        card3: 'repeat(3, minmax(0, 183px))',
+        cardDesktop2: 'repeat(2, minmax(0, 700px))',
+        cardDesktop3: 'repeat(3, minmax(0, 747px))',
+        cardDesktop4: 'repeat(4, minmax(0, 400px))',
       },
       width: {
         containMax: '440px',
