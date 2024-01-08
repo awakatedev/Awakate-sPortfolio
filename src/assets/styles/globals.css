@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+canvas {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+/* En tu archivo CSS */
+@media (min-width: 1280px) {
+    h1 {
+        font-size: 20;
+        line-height: 120px;
+    }
+}
+
+@media (min-width: 1920px) {
+    h1 {
+        font-size: 10px;
+        line-height: 30px;
+    }
+}

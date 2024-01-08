@@ -1,0 +1,19 @@
+
+@font-face {
+    font-family: 'typewcond';
+    src: url('typewcond_regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Reikna';
+    src: url('Reikna.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+
+}

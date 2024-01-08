@@ -1,36 +1,34 @@
-<br>
-<div align="center">
-  <a href="https://awakate.dev">
-  <img src="https://i.imgur.com/s3Kyuco.png"
-    width="700px"
-  /> </a>
-</div>
-<h2 align="center">AWakates.dev Portfolio</h2>
-<p align="center"><b>Made with Next.js and headless Wordpress</b></p>
-<br>
-<div align="center">
-<img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
-<img src="https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white"/>
-<img src="https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white"/>
-</div>
-<br>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Why create a wordpress theme with Next.js?
+## Getting Started
 
-## How does Next.js works as frontend of a Wordpress platform?
+First, run the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-In a project, WordPress is used as a **headless or decoupled CMS**, just for managing the content. Next.js uses data from graphQl to dynamicaly render the data in the DOM with React.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-With Next.js you'll still use your WordPress dashboard to edit and create content in exactly the same way that you are accustomed to. As you make changes content is automatically updated in your Next.js client, just as it is when using a traditional WordPress theme.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### » It's extensible like WordPress
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Frontend with Next.js powers a very flexible extensibility pattern similar to that of WordPress itself
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-### » It's rendered dynamically
+## Learn More
 
-In Next.js the HTML is rendered dynamically by a Node.js server or a serverless service. This means the HTML does not have to be rebuilt each time the content is edited or new content is published.
+To learn more about Next.js, take a look at the following resources:
 
-Because of its dynamic approach, Next.js provides a great power and reliability when it comes to frequent and real-time content updates, making it a great fit for those projects with content that might change rapidly or that is expected to grow over time.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
